@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import WeatherApp from './WeatherApp';
+import AnimatedEmoji from './AnimatedEmojis';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+
+
+        <h1>Weather Search <AnimatedEmoji icon="CLEAR_DAY" colour="white" size={50} /></h1>
+        <WeatherApp />
       </header>
     </div>
   );
