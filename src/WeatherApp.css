@@ -1,0 +1,13 @@
+.Search .results-container .weather-description{
+    text-transform: capitalize;
+}
+
+.Search .results-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Search .future-forecast{
+    display: flex;
+    justify-content: center;
+}

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import FutureForecast from "./FutureForecast";
-
+import "./WeatherApp.css"
 
 export default function WeatherApp(){
     let [city, setCity] = useState(null);
@@ -64,22 +64,37 @@ export default function WeatherApp(){
                 <input type="submit" value="Search" className="search-button"/>
             </form>
 
-            <h2>
+            <h2> Currently </h2>
                 <span className="results-container">
-                    Temperature: {weather.temperature}°
-                    <br/>
-                    Humidity: {weather.humidity}%
-                    <br/>
-                    Wind: {weather.wind} km/h
-                    <br/>
-                    Currently: {weather.description}
-                    <img src={emoji} alt={weather.description}></img>
-                    <br/>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm">
+                            Temperature: {weather.temperature}°
+                            </div>
+                            <div className="col-sm">
+                            Humidity: {weather.humidity}%
+                            </div>
+                            <div className="col-sm">
+                            Wind: {weather.wind} km/h
+                            </div>
+                            <div className="col-sm">
+                            <span className="weather-description">{weather.description}</span>
+                            <img src={emoji} alt={weather.description}></img>
+                            </div>
+                        </div>
+                    </div>
                 </span>
-            </h2>
-
-                <h3>Next 5 Days</h3>
-                <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}  />
+            
+                <div className="future-forecast">
+                    <div className="container">
+                        <div className="row">
+                            <h3 >Next 5 Days</h3>
+                            <div className="col-sm">
+                            <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
         </div>

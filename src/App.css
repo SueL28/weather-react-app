@@ -24,6 +24,12 @@
   color: white;
 }
 
+.App .weather-title{
+  font-size: 50pt;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .App-link {
   color: #61dafb;
 }
