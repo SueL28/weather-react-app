@@ -16,7 +16,7 @@ function App() {
           </span>
           <div>
             <p className="footer-links">
-              <a href="https://github.com/SueL28/weather-react-app" target="_blank">Open-source code</a> by <a href="https://www.linkedin.com/in/su-anne-lieu/" target="_blank">Su-Anne Lieu</a>
+              <a href="https://github.com/SueL28/weather-react-app" target="_blank" rel="noreferrer">Open-source code</a> by <a href="https://www.linkedin.com/in/su-anne-lieu/" target="_blank" rel="noreferrer">Su-Anne Lieu</a>
             </p>
           </div>
         </div>
