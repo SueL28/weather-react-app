@@ -104,7 +104,7 @@ export default function WeatherApp(){
                     </div>
                 </span>
             
-                <div className="future-forecast">
+            {/*<div className="future-forecast">
                     <div className="container">
                         <div className="row">
                             <h3 className="forecast-title">Next 5 Days <AnimatedEmoji icon="CLEAR_NIGHT" colour="white" size={60}/></h3>
@@ -113,7 +113,7 @@ export default function WeatherApp(){
                             </div>
                         </div>
                     </div>
-                </div>
+    </div> */}
 
 
         </div>
