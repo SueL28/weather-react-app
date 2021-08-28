@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import WeatherApp from "./WeatherApp";
+import "./FutureForecast.css"
 import axios from "axios"
 
 export default function FutureForecast(props){
@@ -17,8 +17,57 @@ export default function FutureForecast(props){
     axios.get(forecastUrl).then(showForecast)
 
 return(
-    <div>
-        <span>Temperature:</span>
+    <div className="forecast-container">
+        <div className="container">
+            <div className="row">
+                <div className="col-sm">
+                    <span>Temperature:</span>
+                    <br />
+                    <span>Humidity:</span>
+                    <br />
+                    <span>Wind:</span>
+                    <br />
+                    <span>Description</span>
+                </div>
+                <div className="col-sm">
+                    <span>Temperature:</span>
+                    <br />
+                    <span>Humidity:</span>
+                    <br />
+                    <span>Wind:</span>
+                    <br />
+                    <span>Description</span>
+                </div>
+                <div className="col-sm">
+                    <span>Temperature:</span>
+                    <br />
+                    <span>Humidity:</span>
+                    <br />
+                    <span>Wind:</span>
+                    <br />
+                    <span>Description</span>
+                </div>
+                <div className="col-sm">
+                    <span>Temperature:</span>
+                    <br />
+                    <span>Humidity:</span>
+                    <br />
+                    <span>Wind:</span>
+                    <br />
+                    <span>Description</span>
+                </div>
+                <div className="col-sm">
+                    <span>Temperature:</span>
+                    <br />
+                    <span>Humidity:</span>
+                    <br />
+                    <span>Wind:</span>
+                    <br />
+                    <span>Description</span>
+                </div>
+
+            </div>
+        </div>
     </div>
 );
 }
