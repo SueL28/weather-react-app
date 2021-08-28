@@ -5,6 +5,7 @@
     margin-bottom: 30px;
     font-size: 30pt;
     font-weight: 700;
+    color: rgb(241, 182, 72);
 }
 
  .search-bar{
@@ -19,7 +20,7 @@
     padding: 10px 20px;
     text-transform: uppercase;
     font-weight: bolder;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.788);
 }
 
 .Search .results-container .weather-description{
