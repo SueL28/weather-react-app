@@ -4,6 +4,7 @@ import FutureForecast from "./FutureForecast";
 import AnimatedEmoji from "./AnimatedEmojis";
 import "./WeatherApp.css"
 
+
 export default function WeatherApp(){
     let [city, setCity] = useState(null);
     let [weather, setWeather] = useState("");
@@ -11,8 +12,8 @@ export default function WeatherApp(){
     let [searched, setSearched] = useState(false);
     let [coordinates, setCoordinates] = useState("");
 
+
     function getWeather(response){
-        
         setSearched(true);
         setWeather({
             temperature: Math.round(response.data.main.temp),
@@ -24,8 +25,9 @@ export default function WeatherApp(){
         setCoordinates({
             latitude: response.data.coord.lat,
             longitude:response.data.coord.lon
-
+            
         })
+
         
        // console.log(coordinates)
     }    
@@ -71,7 +73,6 @@ export default function WeatherApp(){
                     <div className="container">
                         <div className="row">
                             <div className="col-sm">
-
                             Temperature
                             <br/>
                             <AnimatedEmoji icon="CLOUDY" colour="white" size={80}/>
@@ -103,8 +104,10 @@ export default function WeatherApp(){
                         </div>
                     </div>
                 </span>
+
+            {/*    <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}/>
             
-            {/*<div className="future-forecast">
+            <div className="future-forecast">
                     <div className="container">
                         <div className="row">
                             <h3 className="forecast-title">Next 5 Days <AnimatedEmoji icon="CLEAR_NIGHT" colour="white" size={60}/></h3>
