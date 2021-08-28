@@ -8,12 +8,13 @@ export default function FutureForecast(props){
     let longitude = props.longitude;
 
     function showForecast(response){
-     console.log(response.data)
+        console.log(response.data)
     }
 
     let apiKey = `a0ec055234934001bdc16c33f46f3ecb`;
     let units = "metric";
     let forecastUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    console.log(forecastUrl)
     axios.get(forecastUrl).then(showForecast)
 
 return(

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import FutureForecast from "./FutureForecast";
+import AnimatedEmoji from "./AnimatedEmojis";
 import "./WeatherApp.css"
 
 export default function WeatherApp(){
@@ -36,6 +37,7 @@ export default function WeatherApp(){
         let units = "metric";
         let basicWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
         axios.get(basicWeatherUrl).then(getWeather);
+        
 
 
     }
@@ -69,22 +71,33 @@ export default function WeatherApp(){
                     <div className="container">
                         <div className="row">
                             <div className="col-sm">
-                                <br/>
-                                
-                            Temperature: {weather.temperature}°C
+
+                            Temperature
+                            <br/>
+                            <AnimatedEmoji icon="CLOUDY" colour="white" size={80}/>
+                            <br/>
+                             {weather.temperature}°C
                             </div>
                             <div className="col-sm">
+                            
+                            Humidity
                             <br/>
-
-                            Humidity: {weather.humidity}%
+                            <AnimatedEmoji icon="FOG" colour="white" size={80}/>
+                            <br/>
+                            {weather.humidity}%
                             </div>
                             <div className="col-sm">
-                            <br/>
 
-                            Wind: {weather.wind} km/h
+
+                            Wind 
+                            <br/>
+                            <AnimatedEmoji icon="WIND" colour="white" size={80}/>
+                            <br/>
+                             {weather.wind} km/h
                             </div>
                             <div className="col-sm">
                             <span className="weather-description">{weather.description}</span>
+                            <br />
                             <img src={emoji} alt={weather.description}></img>
                             </div>
                         </div>
@@ -94,7 +107,7 @@ export default function WeatherApp(){
                 <div className="future-forecast">
                     <div className="container">
                         <div className="row">
-                            <h3 className="forecast-title">Next 5 Days</h3>
+                            <h3 className="forecast-title">Next 5 Days <AnimatedEmoji icon="CLEAR_NIGHT" colour="white" size={60}/></h3>
                             <div className="col-sm">
                             <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}  />
                             </div>
