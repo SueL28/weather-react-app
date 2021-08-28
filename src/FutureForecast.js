@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import "./FutureForecast.css"
 import axios from "axios"
 
 
 export default function FutureForecast(props){
-    let[weekday, setWeekday]= useState("");
+
     let latitude = props.latitude;
     let longitude = props.longitude;
 
@@ -15,9 +15,11 @@ export default function FutureForecast(props){
         let date = new Date(response.data.current.dt * 1000);
         let day = date.getDay();
         let days = ["SUN", "MON", "TUES", "WEDS", "THURS", "FRI", "SAT"]
-        setWeekday(day)
-    
+        
+        return (day[days]);
+        
     }
+    
 
     let apiKey = `a0ec055234934001bdc16c33f46f3ecb`;
     let units = "metric";
@@ -30,7 +32,7 @@ return(
         <div className="container">
             <div className="row">
                 <div className="col-sm">
-                    {weekday}
+
                     <span>Temperature: °C</span>
                     <br />
                     <span>Humidity: %</span>

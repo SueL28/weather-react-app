@@ -105,9 +105,9 @@ export default function WeatherApp(){
                     </div>
                 </span>
 
-               <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}/>
+              {/*   <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}/>
             
-            {/* <div className="future-forecast">
+           <div className="future-forecast">
                     <div className="container">
                         <div className="row">
                             <h3 className="forecast-title">Next 5 Days <AnimatedEmoji icon="CLEAR_NIGHT" colour="white" size={60}/></h3>

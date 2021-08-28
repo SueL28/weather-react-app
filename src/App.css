@@ -29,6 +29,7 @@
   border: 5px solid rgb(194, 128, 6);
   border-radius: 10px;
   padding: 90px;
+  background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
 }
 
 .App .weather-title{
