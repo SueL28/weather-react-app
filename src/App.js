@@ -14,6 +14,11 @@ function App() {
           <span>
             <WeatherApp />
           </span>
+          <div>
+            <p className="footer-links">
+              <a href="https://github.com/SueL28/weather-react-app">Open-source code</a> by <a href="https://www.linkedin.com/in/su-anne-lieu/">Su-Anne Lieu</a>
+            </p>
+          </div>
         </div>
       </header>
     </div>
