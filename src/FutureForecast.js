@@ -21,11 +21,11 @@ return(
         <div className="container">
             <div className="row">
                 <div className="col-sm">
-                    <span>Temperature:</span>
+                    <span>Temperature: °C</span>
                     <br />
-                    <span>Humidity:</span>
+                    <span>Humidity: %</span>
                     <br />
-                    <span>Wind:</span>
+                    <span>Wind: km/h</span>
                     <br />
                     <span>Description</span>
                 </div>

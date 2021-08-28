@@ -1,3 +1,26 @@
+
+
+.Search .headings{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30pt;;
+}
+
+.Search .search-bar{
+    margin-right: 20px;
+    border-radius: 7px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.Search .search-button{
+    border-radius: 7px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: orange;
+}
+
 .Search .results-container .weather-description{
     text-transform: capitalize;
 }
@@ -7,3 +30,13 @@
     justify-content: space-evenly;
 }
 
+.Search .future-forecast{
+    display: flex;
+    justify-content: center;
+}
+
+.Search .future-forecast .forecast-title{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 25pt;
+}

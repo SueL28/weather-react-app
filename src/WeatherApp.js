@@ -64,17 +64,23 @@ export default function WeatherApp(){
                 <input type="submit" value="Search" className="search-button"/>
             </form>
 
-            <h2> Currently </h2>
+            <h2 className="headings"> Currently in {city}</h2>
                 <span className="results-container">
                     <div className="container">
                         <div className="row">
                             <div className="col-sm">
-                            Temperature: {weather.temperature}°
+                                <br/>
+                                
+                            Temperature: {weather.temperature}°C
                             </div>
                             <div className="col-sm">
+                            <br/>
+
                             Humidity: {weather.humidity}%
                             </div>
                             <div className="col-sm">
+                            <br/>
+
                             Wind: {weather.wind} km/h
                             </div>
                             <div className="col-sm">
@@ -88,7 +94,7 @@ export default function WeatherApp(){
                 <div className="future-forecast">
                     <div className="container">
                         <div className="row">
-                            <h3 >Next 5 Days</h3>
+                            <h3 className="forecast-title">Next 5 Days</h3>
                             <div className="col-sm">
                             <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}  />
                             </div>

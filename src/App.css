@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -22,6 +23,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App .app-container{
+  border: 5px solid orange;
+  border-radius: 10px;
+  padding: 90px;
 }
 
 .App .weather-title{
