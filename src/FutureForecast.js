@@ -44,7 +44,7 @@ return(
 
                 </div>
                 <div className="col-sm">
-                    <span>Temperature: 
+                    <span>Temperature 
                         <br/>
                         {dayTwoTemp}°C
                         <br/>
@@ -53,7 +53,7 @@ return(
 
                 </div>
                 <div className="col-sm">
-                    <span>Temperature: 
+                    <span>Temperature 
                         <br/>
                         {dayThreeTemp}°C 
                         <br/>
@@ -62,7 +62,7 @@ return(
 
                 </div>
                 <div className="col-sm">
-                    <span>Temperature: 
+                    <span>Temperature 
                         <br/>
                         {dayFourTemp}°C 
                         <br/>
@@ -71,7 +71,7 @@ return(
 
                 </div>
                 <div className="col-sm">
-                    <span>Temperature: 
+                    <span>Temperature 
                         <br />
                         {dayFiveTemp}°C 
                         <br/>
