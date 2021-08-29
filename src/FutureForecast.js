@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FutureForecast.css"
 import axios from "axios"
 
 
 export default function FutureForecast(props){
-
+    let [dayOneTemp, setDayOneTemp] = useState("");
+    let [dayTwoTemp, setDayTwoTemp] = useState("");
+    let [dayThreeTemp, setDayThreeTemp] = useState("");
+    let [dayFourTemp, setDayFourTemp] = useState("");
+    let [dayFiveTemp, setDayFiveTemp] = useState("");
     let latitude = props.latitude;
     let longitude = props.longitude;
 
     
     
     function showForecast(response){
-    
-        let date = new Date(response.data.current.dt * 1000);
-        let day = date.getDay();
-        let days = ["SUN", "MON", "TUES", "WEDS", "THURS", "FRI", "SAT"]
-        
-        return (day[days]);
-        
+        setDayOneTemp(Math.round(response.data.daily[0].temp.max))
+        setDayTwoTemp(Math.round(response.data.daily[1].temp.max))
+        setDayThreeTemp(Math.round(response.data.daily[2].temp.max))
+        setDayFourTemp(Math.round(response.data.daily[3].temp.max))
+        setDayFiveTemp(Math.round(response.data.daily[4].temp.max))
     }
     
 
@@ -33,49 +35,48 @@ return(
             <div className="row">
                 <div className="col-sm">
 
-                    <span>Temperature: °C</span>
-                    <br />
-                    <span>Humidity: %</span>
-                    <br />
-                    <span>Wind: km/h</span>
-                    <br />
-                    <span>Description</span>
+                    <span>Temperature 
+                        <br />
+                        {dayOneTemp}°C 
+                        <br/>
+                        HIGH
+                    </span>
+
                 </div>
                 <div className="col-sm">
-                    <span>Temperature:</span>
-                    <br />
-                    <span>Humidity:</span>
-                    <br />
-                    <span>Wind:</span>
-                    <br />
-                    <span>Description</span>
+                    <span>Temperature: 
+                        <br/>
+                        {dayTwoTemp}°C
+                        <br/>
+                        HIGH
+                    </span>
+
                 </div>
                 <div className="col-sm">
-                    <span>Temperature:</span>
-                    <br />
-                    <span>Humidity:</span>
-                    <br />
-                    <span>Wind:</span>
-                    <br />
-                    <span>Description</span>
+                    <span>Temperature: 
+                        <br/>
+                        {dayThreeTemp}°C 
+                        <br/>
+                        HIGH
+                    </span>
+
                 </div>
                 <div className="col-sm">
-                    <span>Temperature:</span>
-                    <br />
-                    <span>Humidity:</span>
-                    <br />
-                    <span>Wind:</span>
-                    <br />
-                    <span>Description</span>
+                    <span>Temperature: 
+                        <br/>
+                        {dayFourTemp}°C 
+                        <br/>
+                            HIGH
+                    </span>
+
                 </div>
                 <div className="col-sm">
-                    <span>Temperature:</span>
-                    <br />
-                    <span>Humidity:</span>
-                    <br />
-                    <span>Wind:</span>
-                    <br />
-                    <span>Description</span>
+                    <span>Temperature: 
+                        <br />
+                        {dayFiveTemp}°C 
+                        <br/>
+                        HIGH
+                    </span>
                 </div>
 
             </div>

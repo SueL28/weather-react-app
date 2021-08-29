@@ -21,7 +21,7 @@ export default function WeatherApp(){
             wind: Math.round(response.data.wind.speed),
             description: response.data.weather[0].description
         })
-        setEmoji(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+        setEmoji(`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
         setCoordinates({
             latitude: response.data.coord.lat,
             longitude:response.data.coord.lon
@@ -105,7 +105,6 @@ export default function WeatherApp(){
                     </div>
                 </span>
 
-              {/*   <FutureForecast latitude={coordinates.latitude} longitude={coordinates.longitude}/>
             
            <div className="future-forecast">
                     <div className="container">
@@ -116,7 +115,7 @@ export default function WeatherApp(){
                             </div>
                         </div>
                     </div>
-    </div> */}
+            </div> 
 
 
         </div>
