@@ -23,13 +23,11 @@ export default function FutureForecast(props){
         setDayFiveTemp(Math.round(response.data.daily[4].temp.max))
         setReady(true);
 
+
     }
     
 
-    let apiKey = `a0ec055234934001bdc16c33f46f3ecb`;
-    let units = "metric";
-    let forecastUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-    axios.get(forecastUrl).then(showForecast)
+    
 
 if (ready){
 return(
@@ -87,6 +85,12 @@ return(
     </div>
     );
     }else{
+
+    let apiKey = `a0ec055234934001bdc16c33f46f3ecb`;
+    let units = "metric";
+    let forecastUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(forecastUrl).then(showForecast)
+
         return(
             <div className="container">
             <div className="row">
