@@ -4,6 +4,7 @@ import axios from "axios"
 
 
 export default function FutureForecast(props){
+    const[ready, setReady] = useState(false);
     let [dayOneTemp, setDayOneTemp] = useState("");
     let [dayTwoTemp, setDayTwoTemp] = useState("");
     let [dayThreeTemp, setDayThreeTemp] = useState("");
@@ -15,11 +16,13 @@ export default function FutureForecast(props){
     
     
     function showForecast(response){
+        setReady(true);
         setDayOneTemp(Math.round(response.data.daily[0].temp.max))
         setDayTwoTemp(Math.round(response.data.daily[1].temp.max))
         setDayThreeTemp(Math.round(response.data.daily[2].temp.max))
         setDayFourTemp(Math.round(response.data.daily[3].temp.max))
         setDayFiveTemp(Math.round(response.data.daily[4].temp.max))
+
     }
     
 
@@ -28,7 +31,7 @@ export default function FutureForecast(props){
     let forecastUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(forecastUrl).then(showForecast)
 
-
+if (ready){
 return(
     <div className="forecast-container">
         <div className="container">
@@ -82,5 +85,59 @@ return(
             </div>
         </div>
     </div>
-);
+    );
+    }else{
+        return(
+            <div className="container">
+            <div className="row">
+                <div className="col-sm">
+
+                    <span>Temperature 
+                        <br />
+                        -°C 
+                        <br/>
+                        HIGH
+                    </span>
+
+                </div>
+                <div className="col-sm">
+                    <span>Temperature 
+                        <br/>
+                        -°C
+                        <br/>
+                        HIGH
+                    </span>
+
+                </div>
+                <div className="col-sm">
+                    <span>Temperature 
+                        <br/>
+                        -°C 
+                        <br/>
+                        HIGH
+                    </span>
+
+                </div>
+                <div className="col-sm">
+                    <span>Temperature 
+                        <br/>
+                        -°C 
+                        <br/>
+                            HIGH
+                    </span>
+
+                </div>
+                <div className="col-sm">
+                    <span>Temperature 
+                        <br />
+                        -°C 
+                        <br/>
+                        HIGH
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        );
+    }
 }
