@@ -14,7 +14,6 @@ export default function WeatherApp(){
 
 
     function getWeather(response){
-        setSearched(true);
         setWeather({
             temperature: Math.round(response.data.main.temp),
             humidity: (response.data.main.humidity),
@@ -27,6 +26,7 @@ export default function WeatherApp(){
             longitude:response.data.coord.lon
             
         })
+        setSearched(true);
 
         
        // console.log(coordinates)

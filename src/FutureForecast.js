@@ -16,12 +16,12 @@ export default function FutureForecast(props){
     
     
     function showForecast(response){
-        setReady(true);
         setDayOneTemp(Math.round(response.data.daily[0].temp.max))
         setDayTwoTemp(Math.round(response.data.daily[1].temp.max))
         setDayThreeTemp(Math.round(response.data.daily[2].temp.max))
         setDayFourTemp(Math.round(response.data.daily[3].temp.max))
         setDayFiveTemp(Math.round(response.data.daily[4].temp.max))
+        setReady(true);
 
     }
     
